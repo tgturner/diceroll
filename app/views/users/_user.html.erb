@@ -1,0 +1,11 @@
+<%= turbo_frame_tag dom_id(user) do %>
+  <p data-controller="users">
+    <strong>Username:</strong>
+    <%= user.username %>
+
+    <input data-users-target="id" value="<%= user.id %>" type="hidden" >
+    <%= link_to 'Edit', edit_user_path(user) %> |
+    <%= link_to 'Delete', "#", data: { action: "click->users#destroy" } %>
+  </p>
+<% end %>
+

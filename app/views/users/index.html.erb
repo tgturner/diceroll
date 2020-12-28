@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+  <%= render @users %>
+</div>
+
+<br>
+
+<%= turbo_frame_tag "new_user" do %>
+  <%= link_to 'New User', new_user_path %>
+<% end %>
